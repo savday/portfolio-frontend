@@ -36,7 +36,7 @@ const Hero = () => {
               <p className="hero-paragraph p-text">
               I’m a software engineer focused on building (and occasionally
               designing) unique user-centered web applications. Currently, I’m focused
-              on building exceptional, digital experiences at Studio Aprés.
+              on building exceptional, digital experiences at <a href="https://studioapres.com" target="_blank" rel="noreferrer">Studio Aprés</a>.
             </p>
             </div>
           </div>
