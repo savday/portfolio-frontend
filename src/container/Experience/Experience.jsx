@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-import { images } from '../../constants';
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 import "./Experience.scss";
@@ -58,10 +57,14 @@ const Experience = () => {
               </motion.div>
             </motion.div>
           ))}
+
+        <div className="experience-resume-button-wrap">
+          <a href="https://cdn.sanity.io/files/trmgews6/production/1939d39ef4f8b7efd1ffc90c3f0eaf6f2e56a3b9.pdf" target="_blank" rel="noreferrer" className="experience-resume-card p-text">Download Resume</a>
+        </div>
         </motion.div>
 
         <motion.div className="app__experience-list">
-        <h2 className="head-text">Technologies I've been working with lately</h2>
+        <h3 className="subhead-text"><span>Technologies</span> I've been working with lately</h3>
           {skills?.map((skill) => (
             <motion.div
               whileInView={{ opacity: [0, 1] }}
@@ -80,9 +83,6 @@ const Experience = () => {
           ))}
         </motion.div>
 
-        <div className="experience-resume-button-wrap">
-          <a href="https://cdn.sanity.io/files/trmgews6/production/98a2d8300acbdd8ec98918f248cbe4d06973460f.pdf" target="_blank" rel="noreferrer" className="experience-resume-card p-text">Download Resume</a>
-        </div>
       </div>
     </>
   );
