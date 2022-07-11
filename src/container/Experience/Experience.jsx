@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
+import { images } from '../../constants';
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 import "./Experience.scss";
@@ -21,11 +22,12 @@ const Experience = () => {
     client.fetch(skillsQuery).then((data) => {
       setSkills(data);
     });
+
   }, []);
 
   return (
     <>
-      <h2 className="head-text">Skills & Experience</h2>
+      <h2 className="head-text">Experience</h2>
 
       <div className="app__experience-container">
 
@@ -59,6 +61,7 @@ const Experience = () => {
         </motion.div>
 
         <motion.div className="app__experience-list">
+        <h2 className="head-text">Technologies I've been working with lately</h2>
           {skills?.map((skill) => (
             <motion.div
               whileInView={{ opacity: [0, 1] }}
@@ -76,6 +79,10 @@ const Experience = () => {
             </motion.div>
           ))}
         </motion.div>
+
+        <div className="experience-resume-button-wrap">
+          <a href="https://cdn.sanity.io/files/trmgews6/production/98a2d8300acbdd8ec98918f248cbe4d06973460f.pdf" target="_blank" rel="noreferrer" className="experience-resume-card p-text">Download Resume</a>
+        </div>
       </div>
     </>
   );
